@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: frontend
-          image: tebohoxthapeli/udagram-frontend:v1.2.0
+          image: tebohoxthapeli/udagram-frontend:v1.2.1
           ports:
             - containerPort: 8100
           env:
