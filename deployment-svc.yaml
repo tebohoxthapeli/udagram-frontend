@@ -1,24 +1,24 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: udagram-frontend
+  name: frontend
   labels:
-    app: udagram-frontend
+    app: frontend
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: udagram-frontend
+      app: frontend
   template:
     metadata:
       labels:
-        app: udagram-frontend
+        app: frontend
     spec:
       containers:
         - name: frontend
-          image: tebohoxthapeli/udagram-frontend:v1.1.0
+          image: tebohoxthapeli/udagram-frontend:v1.2.0
           ports:
-            - containerPort: 8100 # could change to just 8100
+            - containerPort: 8100
           env:
             - name: AWS_BUCKET
               valueFrom:
@@ -100,7 +100,7 @@ metadata:
     service: frontend
 spec:
   selector:
-    app: udagram-frontend
+    app: frontend
   ports:
     - protocol: TCP
       port: 8100
