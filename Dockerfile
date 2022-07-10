@@ -14,4 +14,4 @@ FROM nginx:alpine
 #COPY www /usr/share/nginx/html
 COPY --from=ionic  /usr/src/app/www /usr/share/nginx/html
 EXPOSE 8100
-# RUN ionic serve
+RUN ionic serve
