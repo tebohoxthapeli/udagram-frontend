@@ -9,10 +9,10 @@ RUN npm ci
 # Bundle app source
 COPY . .
 RUN ionic build
+EXPOSE 8100
+RUN ionic serve
 ## Run 
 FROM nginx:alpine
 #COPY www /usr/share/nginx/html
 COPY --from=ionic  /usr/src/app/www /usr/share/nginx/html
-EXPOSE 8100
-# RUN ionic serve
-CMD [ "ionic", "serve" ]
+# CMD [ "/bin/sh", "ionic", "serve" ]
