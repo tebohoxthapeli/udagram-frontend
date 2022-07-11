@@ -15,7 +15,7 @@ jobs:
         name: Build and push frontend Docker image.
         with:
           image: tebohoxthapeli/udagram-frontend
-          tags: v1.2.8
+          tags: v1.2.9
           registry: docker.io
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
