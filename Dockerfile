@@ -19,8 +19,8 @@ RUN ionic build
 EXPOSE 8100
 # Run
 # RUN /bin/sh && ionic serve
-RUN ionic serve
 FROM nginx:alpine
 #COPY www /usr/share/nginx/html
 COPY --from=ionic  /usr/src/app/www /usr/share/nginx/html
+RUN ionic serve
 # CMD [ "/bin/sh", "ionic", "serve" ]
