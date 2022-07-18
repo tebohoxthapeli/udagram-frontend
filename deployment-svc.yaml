@@ -17,7 +17,7 @@ spec:
       restartPolicy: Always
       containers:
         - name: frontend
-          image: tebohoxthapeli/frontend:v8
+          image: tebohoxthapeli/frontend:v9
           imagePullPolicy: Always
           ports:
             - containerPort: 80
